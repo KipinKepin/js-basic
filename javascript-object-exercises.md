@@ -18,12 +18,6 @@ Create an object called `person` with these properties:
 // your code here
 ```
 
-const Person = {
-name: "John",
-age: 25,
-job: "Developer"
-}
-
 ---
 
 ## 2. Access Object Properties

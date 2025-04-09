@@ -1,7 +1,9 @@
 # Lot Billing
 
 ## Story
+
 BNI Parking Lot wants to keep their billing system simple. Every vehicle entering the parking lot gets their total duration (in hours) recorded when they leave. The billing system only needs two inputs:
+
 - Vehicle Type
 - Total Duration (in hours)
 
@@ -12,18 +14,18 @@ Your task is to create a program to calculate the total parking fee based on the
 ## Vehicle Types & Pricing
 
 | Vehicle | First Hour | Next Hour (per hour) | Extra Charge if Duration > 24 Hours |
-|---------|------------|----------------------|------------------------------------|
-| Car     | Rp 5,000   | Rp 3,000            | Rp 50,000 (one-time only)         |
-| Bike    | Rp 2,000   | Rp 1,000            | Rp 20,000 (one-time only)         |
+| ------- | ---------- | -------------------- | ----------------------------------- |
+| Car     | Rp 5,000   | Rp 3,000             | Rp 50,000 (one-time only)           |
+| Bike    | Rp 2,000   | Rp 1,000             | Rp 20,000 (one-time only)           |
 
 ---
 
 ## Input
 
-| Name        | Type    | Description                       |
-|-------------|---------|---------------------------------|
-| VehicleType | String  | "car" or "bike"                 |
-| Duration    | Integer | Total Parking Time in Hours     |
+| Name        | Type    | Description                 |
+| ----------- | ------- | --------------------------- |
+| VehicleType | String  | "car" or "bike"             |
+| Duration    | Integer | Total Parking Time in Hours |
 
 ---
 
@@ -47,38 +49,142 @@ Your task is to create a program to calculate the total parking fee based on the
 ### Case 1
 
 Input:
-VehicleType: car 
+VehicleType: car
 Duration: 3
 
 Calculation:
+
 - First Hour = 5,000
 - Next 2 Hours = 2 x 3,000 = 6,000  
-Total = 5,000 + 6,000 = 11,000
+  Total = 5,000 + 6,000 = 11,000
 
 ---
 
 ### Case 2
 
 Input:
-VehicleType: bike 
+VehicleType: bike
 Duration: 1
 
-
 Calculation:
+
 - First Hour = 2,000  
-Total = 2,000
+  Total = 2,000
 
 ---
 
 ### Case 3
 
 Input:
-VehicleType: car 
+VehicleType: car
 Duration: 27
 
-
 Calculation:
-- First Hour = 5,000  
-- Next 26 Hours = 26 x 3,000 = 78,000  
+
+- First Hour = 5,000
+- Next 26 Hours = 26 x 3,000 = 78,000
 - Extra Charge = 50,000  
-Total = 5,000 + 78,000 + 50,000 = 133,000
+  Total = 5,000 + 78,000 + 50,000 = 133,000
+
+<!-- my code -->
+
+```javascript
+// your code here
+// // soal 1
+// // tanpa menggunakan fungsi buatlah rumus untuk menghitung bmi
+
+// let bodyWeight = 78;
+// let bodyHeight = 178;
+// let bmi = bodyWeight / (bodyHeight / 100) ** 2;
+// console.log(bmi);
+
+// // soal 2
+// // buat halo nama
+
+// let nama = "Kevin";
+// const greetrings = `Selamat pagi ${nama}`;
+// console.log(greetrings);
+
+// // soal 3
+// //
+// // let w = 10
+// // let l = 10
+// // let h = 10
+
+// const calculateCube = (w, l, h = 1) => {
+//   return w * l * h;
+// };
+// console.log(calculateCube(10, 10));
+
+// // soal 4
+// const Person = {
+//   name: "Kevin",
+//   age: 25,
+//   job: "Developer",
+// };
+
+// console.log(Person.name);
+// Person.age = 40;
+
+// console.log(Person);
+
+// delete Person.age;
+// console.log(Person);
+
+// const student = {
+//   name: "Alice",
+//   grade: 90,
+//   address: {
+//     city: "Jakarta",
+//     country: "Indonesia",
+//   },
+// };
+
+// console.log(student.address);
+
+// Person.greet = () => {
+//   return `Hi, my name is ${Person.name}`;
+// };
+// console.log(Person.greet());
+
+// const fruits = ["a", "b"];
+// fruits[30] = "g";
+// console.log(fruits[12]);
+const vehicleType = "kuyang";
+const duration = 27;
+const firstHourCar = 5000;
+const nextHourCar = 3000;
+const carExtraCharge = 50000;
+const firstHourBike = 2000;
+const nextHourBike = 1000;
+const bikeExtraCharge = 20000;
+
+const calculateParkingFee = (vehicleType, duration) => {
+  let fee = 0;
+  if (vehicleType == "car") {
+    if (duration <= 1) {
+      fee += firstHourCar;
+    } else if (duration <= 24) {
+      fee += firstHourCar + nextHourCar * (duration - 1);
+    } else {
+      fee += firstHourCar + nextHourCar * (duration - 1) + carExtraCharge;
+    }
+  } else if (vehicleType == "bike") {
+    if (duration <= 1) {
+      fee += firstHourBike;
+    } else if (duration <= 24) {
+      fee += firstHourBike + nextHourBike * (duration - 1);
+    } else {
+      fee += firstHourBike + nextHourBike * (duration - 1) + bikeExtraCharge;
+    }
+  } else {
+    console.log(
+      "ANDA DIKENAKAN DENDA Rp. 1.000.000,-\nKarena kendaraan anda tidak ada dalam list."
+    );
+    fee += 1000000;
+  }
+  return `Biaya: ${fee}`;
+};
+
+console.log(calculateParkingFee(vehicleType, duration));
+```

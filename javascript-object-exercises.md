@@ -47,6 +47,7 @@ Add a new property called `hobby` with value `"Reading"` to the `person` object.
 
 ```javascript
 // your code here
+Person.hobby = "Reading";
 ```
 
 ---

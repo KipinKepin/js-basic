@@ -90,67 +90,7 @@ Calculation:
 
 ```javascript
 // your code here
-// // soal 1
-// // tanpa menggunakan fungsi buatlah rumus untuk menghitung bmi
-
-// let bodyWeight = 78;
-// let bodyHeight = 178;
-// let bmi = bodyWeight / (bodyHeight / 100) ** 2;
-// console.log(bmi);
-
-// // soal 2
-// // buat halo nama
-
-// let nama = "Kevin";
-// const greetrings = `Selamat pagi ${nama}`;
-// console.log(greetrings);
-
-// // soal 3
-// //
-// // let w = 10
-// // let l = 10
-// // let h = 10
-
-// const calculateCube = (w, l, h = 1) => {
-//   return w * l * h;
-// };
-// console.log(calculateCube(10, 10));
-
-// // soal 4
-// const Person = {
-//   name: "Kevin",
-//   age: 25,
-//   job: "Developer",
-// };
-
-// console.log(Person.name);
-// Person.age = 40;
-
-// console.log(Person);
-
-// delete Person.age;
-// console.log(Person);
-
-// const student = {
-//   name: "Alice",
-//   grade: 90,
-//   address: {
-//     city: "Jakarta",
-//     country: "Indonesia",
-//   },
-// };
-
-// console.log(student.address);
-
-// Person.greet = () => {
-//   return `Hi, my name is ${Person.name}`;
-// };
-// console.log(Person.greet());
-
-// const fruits = ["a", "b"];
-// fruits[30] = "g";
-// console.log(fruits[12]);
-const vehicleType = "kuyang";
+const vehicleType = "car";
 const duration = 27;
 const firstHourCar = 5000;
 const nextHourCar = 3000;

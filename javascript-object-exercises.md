@@ -16,6 +16,12 @@ Create an object called `person` with these properties:
 
 ```javascript
 // your code here
+
+const Person = {
+  name: "John",
+  age: 25,
+  job: "Developer",
+};
 ```
 
 ---

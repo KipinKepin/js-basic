@@ -58,6 +58,7 @@ Change the `age` of `person` to `30`.
 
 ```javascript
 // your code here
+Person.age = 30;
 ```
 
 ---

@@ -13,7 +13,6 @@ Create an array called `fruits` that contains:
 - "Orange"
 
 ```javascript
-// your code here
 const fruits = ["Apple", "Banana", "Orange"];
 ```
 
@@ -24,6 +23,8 @@ const fruits = ["Apple", "Banana", "Orange"];
 Print the first and the last element of the `fruits` array.
 
 ```javascript
+console.log(fruits[0]);
+console.log(fruits[fruits.length - 1]);
 // your code here
 console.log(fruits[0]);
 console.log(fruits[fruits.length - 1]);
@@ -36,6 +37,7 @@ console.log(fruits[fruits.length - 1]);
 Add `"Mango"` to the end of `fruits`.
 
 ```javascript
+fruits.push("Mango");
 // your code here
 fruits.push("Mango");
 ```
@@ -47,6 +49,7 @@ fruits.push("Mango");
 Add `"Grape"` to the beginning of `fruits`.
 
 ```javascript
+fruits.unshift("Grape");
 // your code here
 fruits.unshift("Grape");
 ```
@@ -58,6 +61,7 @@ fruits.unshift("Grape");
 Remove the last element from `fruits`.
 
 ```javascript
+fruits.pop();
 // your code here
 fruits.pop();
 ```
@@ -69,6 +73,7 @@ fruits.pop();
 Remove the first element from `fruits`.
 
 ```javascript
+fruits.shift();
 // your code here
 fruits.shift();
 ```
@@ -80,6 +85,7 @@ fruits.shift();
 Print how many items are in the `fruits` array.
 
 ```javascript
+fruits.length;
 // your code here
 console.log(fruits.length());
 ```

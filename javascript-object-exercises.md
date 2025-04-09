@@ -114,6 +114,10 @@ Then call it.
 
 ```javascript
 // your code here
+Person.greet = () => {
+  return `Hi, my name is ${Person.name}`;
+};
+console.log(Person.greet());
 ```
 
 ---
